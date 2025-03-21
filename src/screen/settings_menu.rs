@@ -810,7 +810,7 @@ impl super::Screen for ControlsMenu {
         {
             let mut slider = slider.borrow_mut();
             let txt = ui::TextBuilder::new()
-                .text(format!("Mouse Sensetivity: {:.2}x", r_mouse_sens))
+                .text(format!("Mouse Sensitivity: {:.2}x", r_mouse_sens))
                 .alignment(ui::VAttach::Middle, ui::HAttach::Center)
                 .attach(&mut *slider);
             slider.add_text(txt);
@@ -831,7 +831,7 @@ impl super::Screen for ControlsMenu {
                     .expect("Slider had no text")
                     .borrow_mut()
                     .text = format!(
-                    "Mouse Sensetivity: {:.2}x",
+                    "Mouse Sensitivity: {:.2}x",
                     game.settings.get_float(FloatSetting::MouseSense)
                 );
                 true
